@@ -1,0 +1,271 @@
+record(ao,"ADS_TST:SetiCycleRB"){
+  info(asyn:READBACK,"1")
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.iCycle?")
+  field(SCAN, "Passive")
+  field(PREC, "3")
+}
+
+record(ao,"ADS_TST:SetiCycle"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.iCycle=")
+  field(SCAN, "Passive")
+  field(PREC, "3")
+}
+
+record(ai,"ADS_TST:GetiCycle"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.iCycle?")
+  field(SCAN, ".5 second")
+  field(PREC, "3")
+}
+
+record(bo,"ADS_TST:SetiStateRB"){
+  info(asyn:READBACK,"1")
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.bState?")
+  field(SCAN, "Passive")
+  field(ONAM, One)
+  field(ZNAM, Zero)
+}
+
+record(bo,"ADS_TST:SetbState"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.bState=")
+  field(SCAN, "Passive")
+  field(ONAM, One)
+  field(ZNAM, Zero)
+}
+
+record(bi,"ADS_TST:GetbState"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.bState?")
+  field(SCAN, "I/O Intr")
+  field(ONAM, One)
+  field(ZNAM, Zero)
+}
+
+record(,"ADS_TST:SetdiCycleRB"){
+  info(asyn:READBACK,"1")
+  field(PINI, "1")
+  field(TSE, -2)
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.diCycle?")
+  field(SCAN, "Passive")
+}
+
+record(,"ADS_TST:SetdiCycle"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.diCycle=")
+  field(SCAN, "Passive")
+}
+
+record(,"ADS_TST:GetdiCycle"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.diCycle?")
+  field(SCAN, ".5 second")
+}
+
+record(,"ADS_TST:SetrAmpRB"){
+  info(asyn:READBACK,"1")
+  field(PINI, "1")
+  field(TSE, -2)
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.rAmplitude?")
+  field(SCAN, "Passive")
+}
+
+record(,"ADS_TST:SetrAmp"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.rAmplitude=")
+  field(SCAN, "Passive")
+}
+
+record(,"ADS_TST:GetrAmp"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.rAmplitude?")
+  field(SCAN, ".5 second")
+}
+
+record(ao,"ADS_TST:SetlrAmpRB"){
+  info(asyn:READBACK,"1")
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.lrAmplitude?")
+  field(SCAN, "Passive")
+  field(PREC, "3")
+}
+
+record(ao,"ADS_TST:SetlrAmp"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.lrAmplitude=")
+  field(SCAN, "Passive")
+  field(PREC, "3")
+}
+
+record(ai,"ADS_TST:GetlrAmp"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.lrAmplitude?")
+  field(SCAN, ".5 second")
+  field(PREC, "3")
+}
+
+record(waveform,"ADS_TST:SetlrArrayRB"){
+  info(asyn:READBACK,"1")
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynFloat64ArrayOut")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.lrArray?")
+  field(SCAN, "Passive")
+  field(FTVL, "DOUBLE")
+  field(NELM, 5)
+}
+
+record(waveform,"ADS_TST:SetlrArray"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynFloat64ArrayOut")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.lrArray=")
+  field(SCAN, "Passive")
+  field(FTVL, "DOUBLE")
+  field(NELM, 5)
+}
+
+record(waveform,"ADS_TST:GetlrArray"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynFloat64ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.lrArray?")
+  field(SCAN, ".5 second")
+  field(FTVL, "DOUBLE")
+  field(NELM, 5)
+}
+
+record(waveform,"ADS_TST:SetrArrayRB"){
+  info(asyn:READBACK,"1")
+  field(PINI, "1")
+  field(TSE, -2)
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.rArray?")
+  field(SCAN, "Passive")
+  field(NELM, 5)
+}
+
+record(waveform,"ADS_TST:SetrArray"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.rArray=")
+  field(SCAN, "Passive")
+  field(NELM, 5)
+}
+
+record(waveform,"ADS_TST:GetrArray"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.rArray?")
+  field(SCAN, ".5 second")
+  field(NELM, 5)
+}
+
+record(waveform,"ADS_TST:SetiArrayRB"){
+  info(asyn:READBACK,"1")
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynInt32ArrayOut")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.iArray?")
+  field(SCAN, "Passive")
+  field(NELM, 5)
+}
+
+record(waveform,"ADS_TST:SetiArray"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynInt32ArrayOut")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.iArray=")
+  field(SCAN, "Passive")
+  field(NELM, 5)
+}
+
+record(waveform,"ADS_TST:GetiArray"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynInt32ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.iArray?")
+  field(SCAN, ".5 second")
+  field(NELM, 5)
+}
+
+record(waveform,"ADS_TST:SetdiArrayRB"){
+  info(asyn:READBACK,"1")
+  field(PINI, "1")
+  field(TSE, -2)
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.diArray?")
+  field(SCAN, "Passive")
+  field(NELM, 5)
+}
+
+record(waveform,"ADS_TST:SetdiArray"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.diArray=")
+  field(SCAN, "Passive")
+  field(NELM, 5)
+}
+
+record(waveform,"ADS_TST:GetrdiArray"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.diArray?")
+  field(SCAN, ".5 second")
+  field(NELM, 5)
+}
+
+record(waveform,"ADS_TST:SetStrRB"){
+  info(asyn:READBACK,"1")
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynInt8ArrayOut")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.sTest?")
+  field(SCAN, "Passive")
+  field(FTVL, "CHAR")
+  field(NELM, 35)
+}
+
+record(waveform,"ADS_TST:SetStr"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynInt8ArrayOut")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.sTest=")
+  field(SCAN, "Passive")
+  field(FTVL, "CHAR")
+  field(NELM, 35)
+}
+
+record(waveform,"ADS_TST:GetStr"){
+  field(PINI, "1")
+  field(TSE, -2)
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.sTest?")
+  field(SCAN, ".5 second")
+  field(FTVL, "CHAR")
+  field(NELM, 35)
+}
+

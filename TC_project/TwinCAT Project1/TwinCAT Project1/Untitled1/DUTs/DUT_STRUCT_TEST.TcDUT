@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.12">
+  <DUT Name="DUT_STRUCT_TEST" Id="{64b6492a-8751-410c-8dcd-b0346af5655e}">
+    <Declaration><![CDATA[TYPE DUT_STRUCT_TEST :
+STRUCT
+
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SetfAmpRB
+		pv: ADS_TST:SetfAmp
+		io: o
+		pv: ADS_TST:GetfAmp
+		io: i
+	'}
+	fAmplitude :	LREAL;
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SetFArrayRB
+		pv: ADS_TST:SetFArray
+		io: o
+		pv: ADS_TST:GetFArray
+		io: i
+	'}
+	fArray : ARRAY [1..5] OF LREAL;
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SetStrRB
+		pv: ADS_TST:SetStr
+		io: o
+		pv: ADS_TST:GetStr
+		io: i
+	'}
+	str	:	STRING(35);
+
+
+END_STRUCT	
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.10">
+  <POU Name="MAIN" Id="{a20a5a29-b663-43a1-b002-dba610fd5b32}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SetiCycleRB
+		pv: ADS_TST:SetiCycle
+		io: o
+		pv: ADS_TST:GetiCycle
+		io: i
+	'}
+	iCycle : INT;
+
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SetdiCycleRB
+		pv: ADS_TST:SetdiCycle
+		io: o
+		pv: ADS_TST:GetdiCycle
+		io: i
+	'}
+	diCycle : DINT;
+	
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SetbStateRB
+		pv: ADS_TST:SetbState
+		io: o
+		pv: ADS_TST:GetbState
+		io: i
+	'}
+	bState : BOOL;
+
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SetlrAmpRB
+		pv: ADS_TST:SetlrAmp
+		io: o
+		pv: ADS_TST:GetlrAmp
+		io: i
+	'}
+	lrAmplitude :	LREAL;
+
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SetrAmpRB
+		pv: ADS_TST:SetrAmp
+		io: o
+		pv: ADS_TST:GetrAmp
+		io: i
+	'}
+	rAmplitude :	REAL;
+
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SetlrArrayRB
+		pv: ADS_TST:SetlrArray
+		io: o
+		pv: ADS_TST:GetlrArray
+		io: i
+	'}
+	lrArray : ARRAY [1..5] OF LREAL;
+
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SetrArrayRB
+		pv: ADS_TST:SetrArray
+		io: o
+		pv: ADS_TST:GetrArray
+		io: i
+	'}	
+	rArray : ARRAY [1..5] OF REAL;
+
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SetiArrayRB
+		pv: ADS_TST:SetiArray
+		io: o
+		pv: ADS_TST:GetiArray
+		io: i
+	'}
+	iArray : ARRAY [1..5] OF INT;
+
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SetdiArrayRB
+		pv: ADS_TST:SetdiArray
+		io: o
+		pv: ADS_TST:GetrdiArray
+		io: i
+	'}
+	diArray : ARRAY [1..5] OF DINT;
+	
+	
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SetbArrayRB
+		pv: ADS_TST:SetbArray
+		io: o
+		pv: ADS_TST:GetbArray
+		io: i
+	'}
+	bArray : ARRAY [1..5] OF BOOL;
+	
+	is_true : BOOL;
+	is_false : BOOL;
+	val : BOOL;
+	dval : DINT;
+
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SetStrRB
+		pv: ADS_TST:SetStr
+		io: o
+		pv: ADS_TST:GetStr
+		io: i
+	'}
+	sTest	:	STRING(35);
+	
+	
+	
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SeteStatusRB
+		pv: ADS_TST:SeteStatus
+		io: o
+		pv: ADS_TST:GeteStatus
+		io: i
+	'}	
+	eStatus	:	DUT_ENUM_TEST;
+
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SetenumArrayRB
+		pv: ADS_TST:SetenumArray
+		io: o
+		pv: ADS_TST:GetenumArray
+		io: i
+	'}	
+	enumArray	: ARRAY [1..5] of DUT_ENUM_TEST;
+
+
+
+	
+	{attribute 'pytmc' := '
+		pv: ADS_TST:SetStrRB
+	'}
+	//structure_type : DUT_STRUCT_TEST;
+	
+	// *****************************
+	//bool_type : BOOL;
+	
+	//enum_type : DUT_ENUM_TEST; 
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bArray[1] = TRUE THEN
+	is_true := TRUE;
+	is_false := FALSE;
+
+else
+	is_true := FALSE;
+	is_false := TRUE;
+END_IF
+
+
+val := bArray[1];]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="122" Count="0" />
+      <LineId Id="125" Count="0" />
+      <LineId Id="123" Count="0" />
+      <LineId Id="136" Count="2" />
+      <LineId Id="134" Count="1" />
+      <LineId Id="133" Count="0" />
+      <LineId Id="129" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
