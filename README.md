@@ -1,6 +1,8 @@
-# ADS IOC example
+# ADS IOC Reference 
 
-An example ADS-based IOC with a paired TwinCAT3 solution.
+This repository is for documenting the acceptable records to be used with the ADS IOC. This repository comes packaged with an IOC and TwinCAT3 project and should work out-of-the-box. 
+
+It should be kept closely aligned with [ADS-IOC-Example](https://github.com/pcdshub/ADS-IOC-Example)
 
 All IOC adoption work was completed by mcbrowne and the [ESS](https://europeanspallationsource.se/). 
 
