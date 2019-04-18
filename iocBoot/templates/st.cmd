@@ -26,7 +26,7 @@ adsAsynPortDriverConfigure("ADS_1","172.21.42.215","5.45.6.154.1.1",851,1000, 0,
 asynSetTraceMask("ADS_1", -1, 0x41)
 asynSetTraceIOMask("ADS_1", -1, 6)
 asynSetTraceInfoMask("ADS_1", -1, 15)
-dbLoadRecords("adsApp/Db/adsTest.db","P=ADS_IOC:ASYN:,PORT=ADS_1")
+dbLoadRecords("db/adsTest.db","P=ADS_IOC:ASYN:,PORT=ADS_1")
 
 dbLoadRecords("db/iocSoft.db", "IOC=$(IOC_PV)")
 dbLoadRecords("db/save_restoreStatus.db", "IOC=$(IOC_PV)")

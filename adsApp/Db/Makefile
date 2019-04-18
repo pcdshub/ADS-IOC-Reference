@@ -16,6 +16,7 @@ include $(TOP)/configure/CONFIG
 # Archive files, templates, substitutions like this
 #
 DB += adsGeneral.db
+DB += adsTest.db
 ARCHIVE += archive_ads.archive
 REQ += autosave_ads.req
 
