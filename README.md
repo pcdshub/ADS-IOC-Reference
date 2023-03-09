@@ -1,3 +1,5 @@
+# ** This repository has been archived; see https://github.com/pcdshub/ads-ioc/ **
+
 # ADS IOC Reference 
 
 This repository is for documenting the acceptable records to be used with the ADS IOC. This repository comes packaged with an IOC and TwinCAT3 project and should work out-of-the-box. 
